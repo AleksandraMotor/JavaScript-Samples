@@ -1,0 +1,59 @@
+// -- sections-base --
+
+section {
+    height: 100vh;
+    text-align: center;
+    color: $color-secondary;
+    padding: 30px;
+    background-color: $color-primary;
+
+    h2 {    
+        font-size: 20px;
+        margin: 10px 0;
+        text-transform: uppercase;
+
+        @include breakpoint-above(md) {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+    }
+
+    p {
+        padding: 20px 0;
+    }
+}
+
+// -- foto-slider --
+
+section.foto-slider {
+    background-color: $dark-grey;
+}
+
+// -- scroller-navigation --
+
+.scroller_navigation {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroller_navigation ul {
+    list-style: none;
+}
+
+.scroller_navigation ul li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0.5);
+    cursor: pointer;
+}
+
+.scroller_navigation ul li.active {
+    background-color: blue;
+}
+
+.scroller_navigation ul li + li {
+    margin-top: 10px;
+}
