@@ -1,7 +1,9 @@
 import '../sass/style.scss';
 import Scroller from '../js/helpers/scroller';
 import Swiper from '../js/helpers/swiper';
-import Slider from '../js/helpers/slider';
+import slider from '../js/helpers/slider';
+import startTime from '../js/helpers/clock';
+import calendar from './helpers/calendar';
 
 document.addEventListener("DOMContentLoaded", function() {
     const scroller = new Scroller('#root');
@@ -22,10 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
     
-    ///
     new Swiper();
+
+    startTime();
+    calendar();
+    slider();
+
 })
 
 
 
-Slider();
+// Slider();
