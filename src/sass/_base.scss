@@ -1,11 +1,21 @@
 // -- sections-base --
-
 section {
     height: 100vh;
     text-align: center;
     color: $color-secondary;
-    padding: 30px;
+    padding: 35px;
     background-color: $color-primary;
+
+    h1 {    
+        font-size: 30px;
+        margin: 10px 0;
+        text-transform: uppercase;
+
+        @include breakpoint-above(md) {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+    }
 
     h2 {    
         font-size: 20px;
@@ -20,20 +30,51 @@ section {
 
     p {
         padding: 20px 0;
+        font-size: 18px;
+    }
+}
+
+// -- welcome-page --
+
+.welcome-page {
+    background: linear-gradient(-30deg, #001B79, #1640D6, #29ADB2, #ED5AB3, #FF90C2);
+
+    // background: linear-gradient(-45deg, #6D67E4, #46C2CB, #EC53B0);
+    background-size: 500% 500%;
+    animation: gradient 25s linear infinite;
+
+    &__container {
+        position: relative;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__clock {
+            font-size: 64px;
+            margin: 20px;
+        }
+
+        i {
+            position: absolute;
+            right: 0;
+            top: 40%;
+            font-size: 96px;
+            opacity: 1;
+            animation: show 1s ease-in-out 3, move 2s 3s linear 2, fade-out 0.5s 8s linear forwards;
+        }
     }
 }
 
 // -- foto-slider --
-
 section.foto-slider {
     background-color: $dark-grey;
 }
 
 // -- scroller-navigation --
-
 .scroller_navigation {
     position: fixed;
-    right: 20px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -43,17 +84,62 @@ section.foto-slider {
 }
 
 .scroller_navigation ul li {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(21, 255, 0, 0.3);
     cursor: pointer;
 }
 
 .scroller_navigation ul li.active {
-    background-color: blue;
+    background-color: rgb(21, 255, 0);
 }
 
 .scroller_navigation ul li + li {
     margin-top: 10px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        top: 40%;
+    }
+    50% {
+        top: 45%;
+    }
+    100% {
+        top: 40%;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
