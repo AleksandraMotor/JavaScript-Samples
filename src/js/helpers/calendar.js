@@ -5,7 +5,7 @@ export default function calendar() {
     const date = new Date();
 
     document.getElementById('calendar').innerHTML = (
-        days[date.getDate()] + ', ' + 
+        days[date.getDay()] + ', ' + 
         date.getDate() + ' ' +
         months[date.getMonth()] + ' ' +
         date.getFullYear()
