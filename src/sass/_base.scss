@@ -4,7 +4,7 @@ section {
     text-align: center;
     color: $color-secondary;
     padding: 35px;
-    background-color: $color-primary;
+    background-color: #40128B;
 
     h1 {    
         font-size: 30px;
@@ -35,11 +35,8 @@ section {
 }
 
 // -- welcome-page --
-
 .welcome-page {
     background: linear-gradient(-30deg, #001B79, #1640D6, #29ADB2, #ED5AB3, #FF90C2);
-
-    // background: linear-gradient(-45deg, #6D67E4, #46C2CB, #EC53B0);
     background-size: 500% 500%;
     animation: gradient 25s linear infinite;
 
@@ -66,9 +63,17 @@ section {
     }
 }
 
-// -- foto-slider --
-section.foto-slider {
+// -- comparison-slider --
+section.comparison-slider {
     background-color: $dark-grey;
+}
+
+// -- infinite-carousel --
+section.infinite-carousel {
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 // -- scroller-navigation --

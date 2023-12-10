@@ -5,6 +5,7 @@ import slider from '../js/helpers/slider';
 import startTime from '../js/helpers/clock';
 import calendar from './helpers/calendar';
 import mouseTrailer from './helpers/mouse-trailer';
+import carousel from './helpers/carousel';
 
 document.addEventListener("DOMContentLoaded", function() {
     const scroller = new Scroller('#root');
@@ -30,5 +31,5 @@ document.addEventListener("DOMContentLoaded", function() {
     startTime();
     calendar();
     slider();
-
+    carousel();
 })
