@@ -70,7 +70,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
-            template: "src/templates/app.html"
+            template: "src/templates/app.html",
+            favicon: "public/assets/icons/favicon.ico"
         })
     ]
 };
